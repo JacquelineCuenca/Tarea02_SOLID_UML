@@ -1,6 +1,9 @@
 package com.example;
 
+import com.example.interfaces.Reservable;
+
 public class Hospedaje implements Reservable {
+    private Hotel hotel;
     private Habitacion habitacion;
     private double precio;
 
@@ -17,7 +20,7 @@ public class Hospedaje implements Reservable {
         return habitacion.estaDisponible();
     }
 
-    public void bloquear() {
+    public void bloquearTemporalmente() {
         habitacion.reservar();
     }
 }

@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.interfaces.Reservable;
+
 public class PaqueteTuristico implements Reservable {
     private Hospedaje hospedaje;
     private PaseoTuristico paseo;
@@ -19,7 +21,5 @@ public class PaqueteTuristico implements Reservable {
         return hospedaje.verificarDisponibilidad() && paseo.verificarDisponibilidad();
     }
 
-    public void bloquear() {
-        hospedaje.bloquear();
-    }
+
 }

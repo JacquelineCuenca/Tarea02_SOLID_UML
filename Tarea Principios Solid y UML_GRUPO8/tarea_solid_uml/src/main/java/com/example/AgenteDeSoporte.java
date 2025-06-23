@@ -1,31 +1,16 @@
 package com.example;
 
+import com.example.enums.EstadoIncidente;
+import com.example.interfaces.GestorDeAccion;
 
-public class AgenteDeSoporte {
+public class AgenteDeSoporte extends Usuario{
 
-    private int id;
-    private String nombre;
 
-    public AgenteDeSoporte(String nombre) {
-        this.nombre = nombre;
+    public AgenteDeSoporte(int id, String nombre, String correo) {
+        super(id, nombre, correo);
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
+ 
     public void gestionarIncidente(Incidente incidente, GestorDeAccion gestorDeAccion) {
         System.out.println("Gestionando incidente de: " + incidente.getDescripcion());
 

@@ -1,5 +1,8 @@
 package com.example;
 
+import com.example.interfaces.Notificador;
+import com.example.interfaces.Reservable;
+
 public class RealizarReserva {
     private PagoService pagoService;
     private Notificador notificador;

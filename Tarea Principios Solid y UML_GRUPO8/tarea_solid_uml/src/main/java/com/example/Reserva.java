@@ -2,6 +2,8 @@ package com.example;
 
 import java.time.LocalDateTime;
 
+import com.example.interfaces.Reservable;
+
 public class Reserva {
     private Usuario usuario;
     private Reservable item;

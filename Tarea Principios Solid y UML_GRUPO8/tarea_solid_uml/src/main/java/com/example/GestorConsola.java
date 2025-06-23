@@ -2,6 +2,8 @@ package com.example;
 
 import java.util.Scanner;
 
+import com.example.interfaces.GestorDeAccion;
+
 public class GestorConsola implements GestorDeAccion {
 
     private Scanner scanner = new Scanner(System.in);

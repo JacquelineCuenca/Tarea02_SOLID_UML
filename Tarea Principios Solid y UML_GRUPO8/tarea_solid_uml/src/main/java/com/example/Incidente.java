@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.enums.EstadoIncidente;
+
 public class Incidente {
 
     private int id;

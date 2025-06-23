@@ -1,14 +1,17 @@
 package com.example;
 
+import com.example.enums.EstadoPaseo;
+import com.example.interfaces.Reservable;
+
 public class PaseoTuristico implements Reservable {
     private String nombre;
-    private String estado; // disponible, agotado, cancelado
+    private EstadoPaseo estado; // disponible, agotado, cancelado
     private double precio;
 
     public PaseoTuristico(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
-        this.estado = "disponible";
+        this.estado = EstadoPaseo.DISPONIBLE;
     }
 
     public double calcularPrecio() {
@@ -16,6 +19,7 @@ public class PaseoTuristico implements Reservable {
     }
 
     public boolean verificarDisponibilidad() {
-        return estado.equals("disponible");
+        if(estado.equals(EstadoPaseo.DISPONIBLE) ) return true;
+        else{return false;}    
     }
 }

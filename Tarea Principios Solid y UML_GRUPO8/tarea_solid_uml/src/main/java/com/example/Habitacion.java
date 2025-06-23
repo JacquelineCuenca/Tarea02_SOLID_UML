@@ -1,19 +1,26 @@
 package com.example;
+import com.example.enums.EstadoHabitacion;
+import com.example.enums.TipoHabitacion;
 
 public class Habitacion {
-    private String tipo;
-    private String estado; // disponible, reservada, ocupada, mantenimiento
+    private int idHotel;
+    private int numeroHabitacion;
+    private TipoHabitacion tipo;
+    private EstadoHabitacion estado; // disponible, reservada, ocupada, mantenimiento
 
-    public Habitacion(String tipo) {
-        this.tipo = tipo;
-        this.estado = "disponible";
+    public Habitacion(int idHotel, int numeroHabitacion) {
+        this.idHotel = idHotel;
+        this.numeroHabitacion= numeroHabitacion;
+        this.tipo = TipoHabitacion.ESTANDAR;
+        this.estado = EstadoHabitacion.DISPONIBLE;
     }
 
     public boolean estaDisponible() {
-        return estado.equals("disponible");
+        if(estado.equals(EstadoHabitacion.DISPONIBLE) ) return true;
+        else{return false;}    
     }
 
     public void reservar() {
-        this.estado = "reservada";
+        this.estado = EstadoHabitacion.RESERVADA;
     }
 }
